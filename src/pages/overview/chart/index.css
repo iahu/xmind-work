@@ -1,0 +1,61 @@
+.chart {
+  margin: 12px;
+}
+
+.chart-bar {
+  margin: 10px 0;
+  opacity: 0.2;
+
+  -webkit-transition: all 0.75s;
+  -o-transition: all 0.75s;
+  transition: all 0.75s;
+}
+
+.chart-bar .line {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+.chart-bar .line-inner {
+  height: 0.7em;
+  opacity: 0.7;
+  margin-left: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.chart[data-active=''] .chart-bar {
+  opacity: 1;
+}
+
+.chart .chart-bar.active {
+  opacity: 1;
+}
+.chart .chart-bar.active .line-inner {
+  opacity: 1;
+}
+
+.chart:not([data-active='']) .line-inner {
+  margin-left: 0 !important;
+}
+
+.chart-bar .tip {
+  font-size: 12px;
+  color: #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.chart-bar .name {
+  margin-right: 0.5em;
+}
+.chart-bar .value {
+  color: #888;
+}
+.chart-bar .percent {
+  font-style: normal;
+  font-family: serif;
+  margin-left: 0.5em;
+}

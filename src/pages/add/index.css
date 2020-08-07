@@ -1,0 +1,47 @@
+.add-page .page-content {
+  padding: 12px;
+}
+.field-item label {
+  font-size: 14px;
+  color: #666;
+}
+.field-item select,
+.field-item input[type='text'],
+.field-item input[type='datetime-local'] {
+  width: 240px;
+}
+
+.field-item {
+  margin: 14px 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.field-input {
+  width: 200px;
+}
+.radio-label {
+  display: inline-block;
+  width: 80px;
+}
+
+.submit-btn {
+  width: 160px;
+  background: #09f;
+  border: 1px solid #1081b9;
+  border-radius: 4px;
+  color: #fff;
+  padding: 4px 0;
+  margin: 20px auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+}

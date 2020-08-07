@@ -1,0 +1,53 @@
+.app-header {
+  position: relative;
+  background-color: #eee;
+  min-height: 40px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.app-header-name {
+  margin: 0;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.app-header-left {
+  position: absolute;
+  left: 12px;
+}
+.app-header-right {
+  position: absolute;
+  right: 12px;
+}
+
+.app-header button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+.app-header a {
+  text-decoration: none;
+}
+
+.back-button .icon {
+  font-size: 20px;
+}
+
+.app-header-right {
+  font-size: 12px;
+  color: #666;
+}
