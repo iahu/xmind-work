@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Page = props => {
-  const { children, className = null, ...others } = props
+  const { children, className = '', ...others } = props
   return (
     <div className={`page ${className}`} {...others}>
       {children}
@@ -12,7 +12,7 @@ const Page = props => {
 export default Page
 
 export const PageContent = props => {
-  const { children, className = null, ...others } = props
+  const { children, className = '', ...others } = props
   return (
     <div className={`page-content ${className}`} {...others}>
       {children}

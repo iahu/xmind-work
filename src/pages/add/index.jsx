@@ -80,6 +80,7 @@ const Add = props => {
                 onChange={handleAmountChange}
                 required
                 pattern="[1-9]\d*(\.\d{1,2})?"
+                placeholder="请输入账单金额"
               />
             </div>
           </div>

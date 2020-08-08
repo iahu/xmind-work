@@ -26,7 +26,13 @@
   width: 200px;
 }
 .radio-label {
-  display: inline-block;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  -ms-align-items: center;
+  align-items: center;
   width: 80px;
 }
 
