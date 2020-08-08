@@ -34,5 +34,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^3.3.0",
+    "fetch-mock": "^9.10.6",
+    "jest-fetch-mock": "^3.0.3",
+    "react-async": "^10.0.1",
+    "react-test-renderer": "^16.13.1"
   }
 }
