@@ -69,7 +69,7 @@ describe('Ledger', () => {
     const texts = [].slice
       .call(container.querySelectorAll('#by-category option'))
       .map(e => e.textContent)
-    expect(texts).toContain('房贷')
+    expect(texts.length).toBe(4)
 
     const byType$ = container.querySelector('#by-type')
 
