@@ -1,6 +1,4 @@
-import { useRef } from 'react'
-
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import csv from 'csvtojson'
 import filter from 'lodash/filter'
 import flowRight from 'lodash/flowRight'
@@ -42,21 +40,21 @@ export const getCategories = () =>
  * 将两份数据合并计算
  * @return {Promise} 返回解计算好的数据
  */
-export const getComputedBill = () => {
-  const mergeBill = ([bill, categories]) => {
-    const cateGroupById = groupBy(categories, 'id')
-    const _mapper = (b, i) => {
-      const [{ name }] = cateGroupById[b.category] || []
-      b.categoryName = name
-      b.amount = Math.abs(+b.amount)
-      b.month = getYearMonth(+b.time)
-      b.id = i
-      return b
-    }
-    return sortBy(bill.map(_mapper), 'time').reverse()
+export const mergeBill = ([bill, categories]) => {
+  const cateGroupById = groupBy(categories, 'id')
+  const _mapper = (b, i) => {
+    const [{ name }] = cateGroupById[b.category] || []
+    b.categoryName = name
+    b.amount = Math.abs(+b.amount)
+    b.month = getYearMonth(+b.time)
+    b.id = i
+    return b
   }
-  return Promise.all([getBill(), getCategories()]).then(mergeBill)
+  return sortBy(bill.map(_mapper), 'time').reverse()
 }
+
+export const getComputedBill = () =>
+  Promise.all([getBill(), getCategories()]).then(mergeBill)
 
 /**
  * 经过合并计算过的账单数据
